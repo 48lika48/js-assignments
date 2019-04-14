@@ -30,7 +30,22 @@
  *
  */
 function getFizzBuzz(num) {
-    throw new Error('Not implemented');
+    //throw new Error('Not implemented');
+    let Fizz;
+    let Buzz;
+    let FizzBuzz;
+    if (num % 5 == 0 && num % 3 == 0) {
+        return 'FizzBuzz';
+    }
+    else if (num % 3 == 0) {
+        return 'Fizz';
+    }
+    else if (num % 5 == 0) {
+        return 'Buzz';
+    }
+    else {
+        return num;
+    }
 }
 
 
@@ -46,7 +61,11 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-    throw new Error('Not implemented');
+    var result = 1;
+    while(n){
+        result *= n--;
+    }
+    return result;
 }
 
 
@@ -209,7 +228,10 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
-    throw new Error('Not implemented');
+    let splitString = str.split(""); 
+    let reverseArray = splitString.reverse();
+    let joinArray = reverseArray.join("");
+    return joinArray; 
 }
 
 
@@ -226,7 +248,8 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-    throw new Error('Not implemented');
+    num = num.toString();
+    return  num.split("").reverse().join("");
 }
 
 

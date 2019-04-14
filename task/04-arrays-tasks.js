@@ -23,7 +23,7 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-   throw new Error('Not implemented');
+   return arr.indexOf(value);
 }
 
 /**
@@ -70,8 +70,12 @@ function doubleArray(arr) {
  *    [] => [] 
  */
 function getArrayOfPositives(arr) {
-   throw new Error('Not implemented');
+   let positiveArr = arr.filter(function(number) {
+   return number > 0;
+   });
+   return positiveArr;
 }
+
 
 /**
  * Returns the array with strings only in the specified array (in original order)
@@ -116,7 +120,9 @@ function removeFalsyValues(arr) {
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
 function getUpperCaseStrings(arr) {
-   throw new Error('Not implemented');
+   let upperCaseArr = arr.map(function(x){ 
+   return x.toUpperCase()})
+   return upperCaseArr;
 }
 
 
@@ -131,7 +137,10 @@ function getUpperCaseStrings(arr) {
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
-   throw new Error('Not implemented');
+   let arrToString = arr.map(function(x){
+      return x.length;
+   })
+   return arrToString;
 }
 
 /**
